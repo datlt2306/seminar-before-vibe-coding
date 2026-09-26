@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hôm Nay Ăn Gì? - Ứng Dụng Gợi Ý Món Ăn</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER & TIÊU ĐỀ -->
+  <header class="app-header">
+    <div class="container">
+      <div class="header-badge">Phiên bản 1.0 (Khởi tạo)</div>
+      <h1 class="app-title">Hôm Nay Ăn Gì?</h1>
+      <p class="app-subtitle">Giải pháp chọn món nhanh gọn, tiện lợi cho sinh viên và dân văn phòng</p>
+    </div>
+  </header>
+
+  <!-- NỘI DUNG CHÍNH -->
+  <main class="container main-content">
+    <!-- KHU VỰC ĐIỀU KHIỂN & BỘ LỌC -->
+    <section class="controls-section">
+      <!-- KHUNG TÌM KIẾM (Giao diện khung ban đầu - Logic tìm kiếm sẽ do AI hiện thực trong Live Demo) -->
+      <div class="search-box-wrapper">
+        <label for="searchInput" class="search-label">Tìm món ăn:</label>
+        <div class="search-input-group">
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Nhập tên món muốn tìm (VD: Phở, Cơm, Bún)..." 
+            autocomplete="off"
+          />
+          <button type="button" id="searchBtn" class="btn btn-search">Tìm kiếm</button>
+        </div>
+        <p class="search-note">
+          <small><em>* Lưu ý demo: Ô tìm kiếm đã có giao diện nhưng chưa gắn logic xử lý. Task này sẽ được giao cho AI thực hiện.</em></small>
+        </p>
+      </div>
+
+      <!-- BỘ LỌC THEO LOẠI MÓN -->
+      <div class="filter-box-wrapper">
+        <span class="filter-label">Phân loại món:</span>
+        <div id="filterContainer" class="filter-buttons">
+          <button class="filter-btn active" data-category="tat-ca">Tất cả</button>
+          <button class="filter-btn" data-category="Món nước">Món nước</button>
+          <button class="filter-btn" data-category="Cơm">Cơm</button>
+          <button class="filter-btn" data-category="Bún">Bún</button>
+          <button class="filter-btn" data-category="Bánh mì / Ăn nhanh">Bánh mì / Ăn nhanh</button>
+          <button class="filter-btn" data-category="Món nướng">Món nướng</button>
+          <button class="filter-btn" data-category="Món xào">Món xào</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- THÔNG BÁO VÀ THỐNG KÊ -->
+    <div class="result-bar">
+      <span id="resultCount" class="result-count">Đang hiển thị: 0 món ăn</span>
+    </div>
+
+    <!-- DANH SÁCH MÓN ĂN -->
+    <section class="food-section">
+      <div id="foodList" class="food-grid">
+        <!-- Danh sách thẻ món ăn sẽ được JavaScript render tại đây -->
+      </div>
+      <div id="emptyMessage" class="empty-state hidden">
+        <p class="empty-text">Không tìm thấy món ăn nào phù hợp với bộ lọc hiện tại.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="app-footer">
+    <div class="container">
+      <p>Project thực hành Seminar: <strong>Before Vibe Coding</strong> — Chuẩn bị gì trước khi để AI code?</p>
+      <p><small>Công nghệ: HTML5, CSS3, Vanilla JavaScript (Không framework, không database)</small></p>
+    </div>
+  </footer>
+
+  <!-- NẠP DỮ LIỆU VÀ LOGIC -->
+  <script src="data/mon-an.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
