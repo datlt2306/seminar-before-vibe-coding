@@ -13,7 +13,9 @@ Mỗi trưa hay tối, sinh viên và người đi làm hay mất thời gian ng
 Project này giải quyết việc đó:
 - Hiển thị danh sách món ăn kèm giá và loại món.
 - Cho phép bấm lọc theo loại (Cơm, Món nước, Món nướng...).
-- Cho phép tìm kiếm món theo tên (phần này để dành làm demo với AI).
+- Cho phép tìm kiếm món theo tên.
+- Cho phép quay chọn ngẫu nhiên một món khi phân vân.
+- Cho phép lọc theo khoảng giá phù hợp với túi tiền.
 
 ---
 
@@ -56,24 +58,35 @@ seminar/
 ├── YEU-CAU.md          # Yêu cầu tính năng và phạm vi
 ├── QUY-TAC.md          # Quy tắc khi làm việc với AI
 ├── SEMINAR-SCRIPT.md   # Kịch bản 120 phút cho 2 giảng viên
-├── INTERACTION.md      # 6 câu hỏi tương tác với sinh viên
-├── DEMO-PROMPTS.md     # 5 prompt dùng khi live demo
-├── SLIDES.md           # Nội dung 18 slide trình chiếu
+├── INTERACTION.md      # Bộ câu hỏi tương tác với sinh viên
+├── DEMO-PROMPTS.md     # Toàn bộ prompt dùng khi live demo 4 task
+├── SLIDES.md           # Nội dung 19 slide trình chiếu
 └── CHECKLIST.md        # Danh sách kiểm tra trước khi giao AI code
 ```
 
 ---
 
-## 6. Chức năng hiện tại (trước demo)
+## 6. Chức năng hiện tại (trạng thái ban đầu)
 
 - [x] Hiển thị 10 món ăn từ file `data/mon-an.js`.
 - [x] Lọc món theo loại (Tất cả, Món nước, Cơm, Bún, Bánh mì, Món nướng, Món xào).
 - [x] Hiển thị số lượng món đang xem.
-- [ ] **Tìm kiếm:** Giao diện ô nhập đã có sẵn, nhưng chưa có code JavaScript. Đây là phần sẽ giao cho AI làm trong buổi demo.
+- [ ] **Giao diện khung tìm kiếm:** Đã có ô nhập liệu nhưng chưa có code JavaScript.
 
 ---
 
-## 7. Những gì KHÔNG làm trong project này
+## 7. Các task sẽ live demo cùng AI trong seminar
+
+Để buổi demo 50 phút hấp dẫn và phong phú, giảng viên sẽ cùng sinh viên điều phối AI qua 4 task thực tế:
+
+1. **Task 1 — Tìm kiếm món ăn theo tên:** Đi đúng quy trình từ đọc hiểu project, lập kế hoạch đến viết code và test.
+2. **Task 2 — Xử lý khi yêu cầu thay đổi:** Mở rộng tìm kiếm theo cả nguyên liệu món ăn (học cách phân tích ảnh hưởng).
+3. **Task 3 — Thêm tính năng "Chọn hộ tôi 1 món!" (Random Pick):** Bấm nút để máy tự chọn ngẫu nhiên 1 món khi người dùng lười suy nghĩ.
+4. **Task 4 — Lọc theo khoảng giá & Tình huống bắt lỗi AI:** Thử cố tình thả prompt cẩu thả để thấy AI phá vỡ giao diện ra sao, sau đó dùng quy tắc và đặc tả chuẩn để ép AI sửa lại đúng.
+
+---
+
+## 8. Những gì KHÔNG làm trong project này
 
 Để tránh lan man và giúp AI không tự ý thêm tính năng thừa:
 - Không có đăng nhập / đăng ký.
